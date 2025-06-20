@@ -1,5 +1,4 @@
 import { useState } from "react"
-import "./App.css"
 import ExtensionGrid from "./components/ExtensionGrid"
 import Header from "./components/Header"
 import Tabs from "./components/Tabs"
@@ -14,7 +13,7 @@ const dataWithImages = rawData.map((item, index) => ({
   name: item.name,
   description: item.description,
   active: item.isActive,
-  logo: logoMap[item.logo],
+  logo: logoMap[item.logo] as string,
 }))
 
 function App() {
@@ -34,7 +33,7 @@ function App() {
     )
   }
 
-  const RemoveExtension = (id) => {
+  const RemoveExtension = (id: number) => {
     setExtentions((prev) => prev.filter((ext) => ext.id !== id))
   }
 

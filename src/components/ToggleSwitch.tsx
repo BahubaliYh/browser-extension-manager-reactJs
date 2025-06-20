@@ -1,5 +1,11 @@
-function ToggleSwitch({ checked, onChange }) {
+type ToggleSwitchProps = {
+  checked: boolean
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+function ToggleSwitch({ checked, onChange }: ToggleSwitchProps) {
   console.log("checked", checked)
+
   return (
     <label className="inline-flex items-center cursor-pointer">
       <input

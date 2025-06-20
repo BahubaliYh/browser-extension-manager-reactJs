@@ -1,5 +1,15 @@
 import ToggleSwitch from "./ToggleSwitch"
 
+type ExtensionCardProps = {
+  id: number
+  logo: string
+  name: string
+  description: string
+  active: boolean
+  onToggle: () => void
+  RemoveExtension: (id: number) => void
+}
+
 function ExtensionCard({
   id,
   logo,
@@ -8,7 +18,7 @@ function ExtensionCard({
   active,
   onToggle,
   RemoveExtension,
-}) {
+}: ExtensionCardProps) {
   return (
     <div className="bg-white rounded-lg p-4 dark:bg-slate-700">
       <div className="flex items-start gap-4">

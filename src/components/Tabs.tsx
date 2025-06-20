@@ -1,4 +1,9 @@
-function Tabs({ filter, setFilter }) {
+type TabsProps = {
+  filter: string
+
+  setFilter: (tab: string) => void
+}
+function Tabs({ filter, setFilter }: TabsProps) {
   const tabs = ["All", "Active", "Inactive"]
   return (
     <div className="flex justify-between mt-5">
