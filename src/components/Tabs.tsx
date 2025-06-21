@@ -6,9 +6,9 @@ type TabsProps = {
 function Tabs({ filter, setFilter }: TabsProps) {
   const tabs = ["All", "Active", "Inactive"]
   return (
-    <div className="flex justify-between mt-5">
+    <div className="flex flex-wrap justify-center sm:justify-between mt-5">
       <h1 className="text-3xl font-bold">Extensions List</h1>
-      <div className="flex justify-between gap-3">
+      <div className="flex gap-3 justify-center sm:justify-end w-full sm:w-auto mt-4 sm:mt-0">
         {tabs.map((tab) => (
           <button
             className={`px-4 py-1 rounded-full text-sm font-medium ${

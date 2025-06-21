@@ -20,7 +20,7 @@ function ExtensionCard({
   RemoveExtension,
 }: ExtensionCardProps) {
   return (
-    <div className="bg-white rounded-lg p-4 dark:bg-slate-700">
+    <div className="bg-white rounded-2xl p-4 dark:bg-slate-700">
       <div className="flex items-start gap-4">
         <img src={logo} alt="" className="w-12 object-contain" />
         <div>
